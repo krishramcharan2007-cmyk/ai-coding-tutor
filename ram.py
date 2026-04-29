@@ -15,8 +15,8 @@ if not firebase_admin._apps:
 db = firestore.client()
 
 # --- 2. CONNECT TO GOOGLE AI ---
-genai.configure(api_key="AIzaSyCeWSRVdVjF07mZwXaWmcd5VhVGJD3nBcM")
-model = genai.GenerativeModel('gemini-2.5-flash')
+genai.configure(api_key=st.secrets["AIzaSyB_vKnmLiNFUa1vl8TcCP9OZuWKb_ksA50"])
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 # --- 3. WEBSITE DESIGN ---
 st.title("My AI Coding Tutor 🚀")
