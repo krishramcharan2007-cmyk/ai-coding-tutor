@@ -3,13 +3,14 @@ import google.generativeai as genai
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import json 
 
 # --- 1. CONNECT TO YOUR CLOUD DATABASE ---
 # We check if it is already connected so the app doesn't crash when you refresh
 if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase-key.json")
+    key_dict = json.loads(st.secrets["firebase_key"])
+    cred = credentials.Certificate(key_dict)
     firebase_admin.initialize_app(cred)
-
 # Create a variable called 'db' to talk to your filing cabinet
 db = firestore.client()
 
