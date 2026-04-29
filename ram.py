@@ -55,4 +55,4 @@ if user_question:
                 })
                 
             except Exception as e:
-                st.error(f"🚨 Secret Error Code: {e}")
+                st.warning("oops! too many people are using the tutor right now. please wait 20 seconds and try again!.")
