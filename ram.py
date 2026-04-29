@@ -16,7 +16,7 @@ db = firestore.client()
 
 # --- 2. CONNECT TO GOOGLE AI ---
 genai.configure(api_key=st.secrets["gemini_key"])
-model = genai.GenerativeModel('gemini-2.5-pro')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # --- 3. WEBSITE DESIGN ---
 st.title("My AI Coding Tutor 🚀")
